@@ -76,6 +76,21 @@ $.fn.validateCreditCard = (callback, options) ->
             pattern: /^(6011|622(12[6-9]|1[3-9][0-9]|[2-8][0-9]{2}|9[0-1][0-9]|92[0-5]|64[4-9])|65)/
             valid_length: [ 16 ]
         }
+        {
+            name: 'jcp',
+            pattern: /\d{11}/,
+            valid_length: [11]
+        }
+        {
+            name: 'nordstroms',
+            pattern: /\d{8}?\d{9}/,
+            valid_length: [8,9]
+        }
+        {
+            name: 'nordstroms',
+            pattern: /^(5048878\d{9})$/,
+            valid_length: [16]
+        }
     ]
 
     bind = false
